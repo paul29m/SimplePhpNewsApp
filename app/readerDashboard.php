@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <head>
 	<link rel="stylesheet" href="../css/style.css" />
+	<title>News App</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
@@ -12,7 +13,7 @@
 			var lastSearchS="";
 			var lastSearchE="";
 			function getNews(){
-				var url="showTable.php";
+				var url="../functions/showTable.php";
 				var getter=$.get(url,function(data){
 					document.getElementById("maindiv").innerHTML=data;
 				});
@@ -21,7 +22,7 @@
 				var $form=$("#searchForm");
 				console.log("search by news");
 				var	category=$form.find('input[name="Category"]').val();
-				var url="showNewsGenre.php";
+				var url="../functions/showNewsGenre.php";
 				var getter=$.get(url,{Category:category},function(data){
 					if(lastSearch!=""){
 					data="<p> Last Category Search: " + lastSearch + "</p>"+data;

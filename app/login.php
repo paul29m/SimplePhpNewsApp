@@ -26,7 +26,7 @@
 			$rows = mysqli_num_rows($result);
 			if($rows==1){
 				$_SESSION['username'] = $username;
-				header("Location: index.php"); // Redirect user to index.php
+				header("Location: mainAdd.php"); // Redirect user to index.php
 				}else{
 					echo "<div class='form'><h3>Username/password is incorrect.</h3><br/>Click here to <a href='login.php'>Login</a></div>";
 					}
@@ -42,7 +42,7 @@
 			<input name="submit" type="submit" value="Login" />
 		</form>
 		<p>
-		<a href="dashboard.php">Continue as reader</a>
+		<a href="ReaderDashboard.php">Continue as reader</a>
 		</p>
 		</div>
 		<?php } ?>
